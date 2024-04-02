@@ -1,4 +1,5 @@
 import AnimaisResgatados from "./components/AnimaisResgatados";
+import Doacao from "./components/Doacao";
 import Duvidas from "./components/Duvidas";
 
 export default function App() {
@@ -6,6 +7,7 @@ export default function App() {
     <>
       <AnimaisResgatados />
       <Duvidas />
+      <Doacao />
     </>
   );
 }

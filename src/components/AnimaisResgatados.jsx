@@ -1,38 +1,38 @@
 import "../styles/AnimaisResgatados.css";
 import cavalo1 from "../assets/cavalos/cavalo1.png";
-import cavalo2 from "../assets/cavalos/cavalo2.png";
-import cavalo3 from "../assets/cavalos/cavalo3.png";
+// import cavalo2 from "../assets/cavalos/cavalo2.png";
+// import cavalo3 from "../assets/cavalos/cavalo3.png";
 import masculinoImage from "../assets/icons/sexo-masculino.svg";
 import previousButton from "../assets/icons/previous-button.svg";
 import nextButton from "../assets/icons/next-button.svg";
 
 export default function AnimaisResgatados() {
-  const cavalos = [
-    {
-      nome: "Atlas1",
-      img: { cavalo1 },
-      idade: "12 anos",
-      qualidades: ["Dócil", "Brincalhão", "Calmo"],
-      descricao:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti, aut cumque. Fugiat numquam quia rerum, fuga doloremque pariatur soluta. orem ipsum dolor sit, amet consectetur adipisicing elit.Pariatur voluptatem, eveniet sapiente error eum deleniti perferendis asperiores veniam, molestiae ab rerum maiores! Ratione nobis eum eius deleniti maiores accusamus. Nemo?",
-    },
-    {
-      nome: "Atlas2",
-      img: { cavalo2 },
-      idade: "12 anos",
-      qualidades: ["Dócil", "Brincalhão", "Calmo"],
-      descricao:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.    Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti, aut cumque.Fugiat numquam quia rerum, fuga doloremque pariatur soluta. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur voluptatem, eveniet sapiente error eum delenit perferendis asperiores veniam, molestiae ab rerum maiores!Ratione nobis eum eius deleniti maiores accusamus. Nemo?",
-    },
-    {
-      nome: "Atlas3",
-      img: { cavalo3 },
-      idade: "12 anos",
-      qualidades: ["Dócil", "Brincalhão", "Calmo"],
-      descricao:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.    Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti, aut cumque.  Fugiat numquam quia rerum, fuga doloremque pariatur soluta. Lorem ipsum dolor sit, amet consectetur adipisicing elit.Pariatur voluptatem, eveniet sapiente error eum delenitiperferendis asperiores veniam, molestiae ab rerum maiores! Ratione nobis eum eius deleniti maiores accusamus. Nemo?",
-    },
-  ];
+  // const cavalos = [
+  //   {
+  //     nome: "Atlas1",
+  //     img: { cavalo1 },
+  //     idade: "12 anos",
+  //     qualidades: ["Dócil", "Brincalhão", "Calmo"],
+  //     descricao:
+  //       "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
+  //   },
+  //   {
+  //     nome: "Atlas2",
+  //     img: { cavalo2 },
+  //     idade: "12 anos",
+  //     qualidades: ["Dócil", "Brincalhão", "Calmo"],
+  //     descricao:
+  //       "Lorem ipsum dolor sit amet consectetur, adipisicing elit.    Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
+  //   },
+  //   {
+  //     nome: "Atlas3",
+  //     img: { cavalo3 },
+  //     idade: "12 anos",
+  //     qualidades: ["Dócil", "Brincalhão", "Calmo"],
+  //     descricao:
+  //       "Lorem ipsum dolor sit amet consectetur, adipisicing elit.    Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
+  //   },
+  // ];
 
   return (
     <>

@@ -26,16 +26,16 @@ export default function Duvidas() {
             </div>
             <div className="duvidas-content--title">
               <h3>Como ser um padrinho?</h3>
-              <img src={openedIcon} alt="" />
+              <img src={closedIcon} alt="" />
             </div>
 
             <div className="duvidas-content--title">
               <h3>Para onde vão as doações da ong?</h3>
-              <img src={openedIcon} alt="" />
+              <img src={closedIcon} alt="" />
             </div>
             <div className="duvidas-content--title">
               <h3>Como entro em contato para fazer doações?</h3>
-              <img src={openedIcon} alt="" />
+              <img src={closedIcon} alt="" />
             </div>
           </div>
         </div>

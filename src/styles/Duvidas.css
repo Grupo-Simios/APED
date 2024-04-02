@@ -1,0 +1,73 @@
+* {
+  padding: o;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.duvidas-background {
+  background: #e9f0e6;
+}
+
+.duvidas-container {
+  margin: 0 auto;
+  padding: 100px 0;
+  width: 900px;
+}
+
+.section-title {
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.duvidas-container h2 {
+  font-size: 56px;
+  font-family: "Roboto";
+  background: linear-gradient(to bottom, #507741, #25371e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);
+}
+
+.duvidas-content {
+  width: 900px;
+}
+
+.duvidas-content--title {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  width: 900px;
+  background: linear-gradient(to bottom, #507741, #25371e);
+}
+
+.duvidas-content--title h3 {
+  font-size: 25px;
+  font-family: "Roboto";
+  color: #ffffff;
+}
+
+.duvidas-content--title img:hover {
+  cursor: pointer;
+}
+
+.duvidas-content--title span {
+  font-size: 30px;
+  font-family: "Roboto";
+  color: #ffffff;
+}
+
+.duvidas-content--desc {
+  width: 900px;
+  background: #fcf4eb;
+  padding: 30px 30px;
+}
+
+.duvidas-content--desc p {
+  font-size: 20px;
+  font-family: "Roboto";
+}

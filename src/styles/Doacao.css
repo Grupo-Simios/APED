@@ -1,5 +1,52 @@
-* {
-  padding: o;
-  margin: 0;
-  box-sizing: border-box;
+@import "./gerais.css";
+
+.doacoes-container {
+  padding: 150px 0;
+  display: flex;
+  justify-content: space-around;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.doacoes-text--title {
+  max-width: 435px;
+  margin-top: 10px;
+}
+
+.doacoes-text--title h2 {
+  color: #304727;
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.doacoes-text--title p {
+  color: #555555;
+  font-size: 24px;
+}
+
+.doacoes-text--content {
+  margin: 40px 0;
+}
+
+.doacoes-item {
+  max-width: 270px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0px;
+}
+
+.doacoes-item p {
+  color: #555555;
+  font-size: 18px;
+}
+
+.doacoes-text--content h3 {
+  font-size: 24px;
+  color: #304727;
+  margin-bottom: 2px;
+}
+
+.doacoes-img {
+  max-width: 570px;
 }

@@ -1,0 +1,69 @@
+@import "./gerais.css";
+
+.horse-name,
+.title {
+  color: #304727;
+  font-family: "Roboto";
+  font-size: 39px;
+}
+
+.horse-name--card {
+  max-width: 265px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #555555;
+  margin-bottom: 20px;
+}
+
+.horse-name--card img {
+  margin-left: 10px;
+  height: 25px;
+}
+
+.horse-image--container {
+  padding: 0px;
+  width: 290px;
+  border-right: 1px solid #555555;
+  max-height: 355px;
+}
+
+.horse-image {
+  max-width: 265px;
+  margin: 0;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 265px;
+}
+
+.idade {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: bold;
+  color: #304727;
+  margin: 10px 0;
+}
+
+.qualities-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.quality {
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background: #304727;
+  padding: 8px 15px;
+  border-radius: 12px;
+}
+
+.desc {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #707070;
+}

@@ -6,6 +6,7 @@ import masculinoImage from "../assets/icons/sexo-masculino.svg";
 import previousButton from "../assets/icons/previous-button.svg";
 import nextButton from "../assets/icons/next-button.svg";
 import CavaloCard from "./CavaloCard";
+import Botao from "./Botao";
 
 export default function AnimaisResgatados() {
   const cavalos = [
@@ -82,6 +83,7 @@ export default function AnimaisResgatados() {
           <span className="current-slides"></span>
           <span className="current-slides"></span>
         </div>
+        <Botao text={"Quero ser padrinho"} />
       </div>
     </>
   );

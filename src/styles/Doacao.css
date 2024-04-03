@@ -28,19 +28,6 @@
   margin: 40px 0;
 }
 
-.doacoes-item {
-  max-width: 270px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 0px;
-}
-
-.doacoes-item p {
-  color: #555555;
-  font-size: 18px;
-}
-
 .doacoes-text--content h3 {
   font-size: 24px;
   color: #304727;

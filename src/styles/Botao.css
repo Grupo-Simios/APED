@@ -1,0 +1,25 @@
+@import "./gerais.css";
+
+.button-container {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.button-container button {
+  font-size: 14px;
+  color: #28291d;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 12px;
+  background: #f7f7f7;
+  padding: 12px 100px;
+  max-width: 500px;
+}
+
+.button-container button:hover {
+  cursor: pointer;
+  color: #f7f7f7;
+  background: linear-gradient(to bottom, #507741, #25371e);
+}

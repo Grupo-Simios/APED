@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/AnimaisResgatados.css";
 import cavalo1 from "../assets/cavalos/cavalo1.png";
 import cavalo2 from "../assets/cavalos/cavalo2.png";
@@ -11,6 +11,24 @@ import Botao from "./Botao";
 
 export default function AnimaisResgatados() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [slidesToShow, setSlidesToShow] = useState(3); // Inicialmente, mostrar 3 cavalos por slide
+
+  useEffect(() => {
+    updateSlidesToShow();
+    window.addEventListener("resize", updateSlidesToShow);
+    return () => window.removeEventListener("resize", updateSlidesToShow);
+  }, []);
+
+  const updateSlidesToShow = () => {
+    if (window.innerWidth < 768) {
+      setSlidesToShow(1);
+    } else if (window.innerWidth >= 768 && window.innerWidth < 900) {
+      setSlidesToShow(2);
+    } else {
+      setSlidesToShow(3);
+    }
+  };
+
   const [cavalos] = useState([
     {
       nome: "Atlas1",
@@ -43,6 +61,26 @@ export default function AnimaisResgatados() {
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
     },
     {
+      nome: "Atlas1",
+      sexo: masculinoImage,
+      img: cavalo1,
+      alt: "Cavalos marrom de olhos azuis",
+      idade: "12 anos",
+      qualidades: ["Dócil", "Brincalhão", "Calmo"],
+      descricao:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
+    },
+    {
+      nome: "Atlas2",
+      sexo: masculinoImage,
+      img: cavalo2,
+      alt: "Cavalos marrom de olhos azuis",
+      idade: "12 anos",
+      qualidades: ["Dócil", "Brincalhão", "Calmo"],
+      descricao:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
+    },
+    {
       nome: "Atlas3",
       sexo: masculinoImage,
       img: cavalo3,
@@ -53,6 +91,26 @@ export default function AnimaisResgatados() {
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
     },
     {
+      nome: "Atlas1",
+      sexo: masculinoImage,
+      img: cavalo1,
+      alt: "Cavalos marrom de olhos azuis",
+      idade: "12 anos",
+      qualidades: ["Dócil", "Brincalhão", "Calmo"],
+      descricao:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
+    },
+    {
+      nome: "Atlas2",
+      sexo: masculinoImage,
+      img: cavalo2,
+      alt: "Cavalos marrom de olhos azuis",
+      idade: "12 anos",
+      qualidades: ["Dócil", "Brincalhão", "Calmo"],
+      descricao:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
+    },
+    {
       nome: "Atlas3",
       sexo: masculinoImage,
       img: cavalo3,
@@ -62,49 +120,10 @@ export default function AnimaisResgatados() {
       descricao:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
     },
-    {
-      nome: "Atlas3",
-      sexo: masculinoImage,
-      img: cavalo1,
-      alt: "Cavalos marrom de olhos azuis",
-      idade: "12 anos",
-      qualidades: ["Dócil", "Brincalhão", "Calmo"],
-      descricao:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
-    },
-    {
-      nome: "Atlas3",
-      sexo: masculinoImage,
-      img: cavalo1,
-      alt: "Cavalos marrom de olhos azuis",
-      idade: "12 anos",
-      qualidades: ["Dócil", "Brincalhão", "Calmo"],
-      descricao:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
-    },
-    {
-      nome: "Atlas3",
-      sexo: masculinoImage,
-      img: cavalo1,
-      alt: "Cavalos marrom de olhos azuis",
-      idade: "12 anos",
-      qualidades: ["Dócil", "Brincalhão", "Calmo"],
-      descricao:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
-    },
-    {
-      nome: "Atlas3",
-      sexo: masculinoImage,
-      img: cavalo1,
-      alt: "Cavalos marrom de olhos azuis",
-      idade: "12 anos",
-      qualidades: ["Dócil", "Brincalhão", "Calmo"],
-      descricao:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
-    },
+    // Adicione mais cavalos aqui...
   ]);
 
-  const totalSlides = Math.ceil(cavalos.length / 3);
+  const totalSlides = Math.ceil(cavalos.length / slidesToShow);
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) =>
@@ -135,7 +154,10 @@ export default function AnimaisResgatados() {
           </button>
           <div className="horses-cards">
             {cavalos
-              .slice(currentSlide * 3, (currentSlide + 1) * 3)
+              .slice(
+                currentSlide * slidesToShow,
+                (currentSlide + 1) * slidesToShow
+              )
               .map((cavalo, index) => (
                 <CavaloCard
                   key={index}

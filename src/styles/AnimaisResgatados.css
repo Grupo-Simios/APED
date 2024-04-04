@@ -33,7 +33,7 @@
 .horses-cards {
   width: 1050px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   transition: transform 0.5s ease;
 }
 
@@ -54,7 +54,7 @@
   content: " ";
   margin: 0 auto;
   display: flex;
-  width: 150px;
+  width: 120px;
   height: 8px;
   background: #d9d9d9;
 }
@@ -80,5 +80,22 @@
   background: #d9d9d9;
 }
 
-@media screen and (min-width: ) {
+@media screen and (max-width: 768px) {
+  .title-container {
+  
+  display: none;
+  }
+
+
+  .horses-cards--container {
+    width: 100%;
+  }
+
+  .horses-cards {
+    width: 100%;
+  }
+
+  .current-slides::before {
+    width: 40px;
+  }
 }

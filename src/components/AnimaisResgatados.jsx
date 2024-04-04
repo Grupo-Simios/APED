@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "../styles/AnimaisResgatados.css";
 import cavalo1 from "../assets/cavalos/cavalo1.png";
 import cavalo2 from "../assets/cavalos/cavalo2.png";
@@ -9,7 +10,8 @@ import CavaloCard from "./CavaloCard";
 import Botao from "./Botao";
 
 export default function AnimaisResgatados() {
-  const cavalos = [
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [cavalos] = useState([
     {
       nome: "Atlas1",
       sexo: masculinoImage,
@@ -40,10 +42,84 @@ export default function AnimaisResgatados() {
       descricao:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
     },
-  ];
+    {
+      nome: "Atlas3",
+      sexo: masculinoImage,
+      img: cavalo3,
+      alt: "Cavalos marrom de olhos azuis",
+      idade: "12 anos",
+      qualidades: ["Dócil", "Brincalhão", "Calmo"],
+      descricao:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
+    },
+    {
+      nome: "Atlas3",
+      sexo: masculinoImage,
+      img: cavalo3,
+      alt: "Cavalos marrom de olhos azuis",
+      idade: "12 anos",
+      qualidades: ["Dócil", "Brincalhão", "Calmo"],
+      descricao:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
+    },
+    {
+      nome: "Atlas3",
+      sexo: masculinoImage,
+      img: cavalo1,
+      alt: "Cavalos marrom de olhos azuis",
+      idade: "12 anos",
+      qualidades: ["Dócil", "Brincalhão", "Calmo"],
+      descricao:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
+    },
+    {
+      nome: "Atlas3",
+      sexo: masculinoImage,
+      img: cavalo1,
+      alt: "Cavalos marrom de olhos azuis",
+      idade: "12 anos",
+      qualidades: ["Dócil", "Brincalhão", "Calmo"],
+      descricao:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
+    },
+    {
+      nome: "Atlas3",
+      sexo: masculinoImage,
+      img: cavalo1,
+      alt: "Cavalos marrom de olhos azuis",
+      idade: "12 anos",
+      qualidades: ["Dócil", "Brincalhão", "Calmo"],
+      descricao:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
+    },
+    {
+      nome: "Atlas3",
+      sexo: masculinoImage,
+      img: cavalo1,
+      alt: "Cavalos marrom de olhos azuis",
+      idade: "12 anos",
+      qualidades: ["Dócil", "Brincalhão", "Calmo"],
+      descricao:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
+    },
+  ]);
+
+  const totalSlides = Math.ceil(cavalos.length / 3);
+
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) =>
+      prevSlide === totalSlides - 1 ? 0 : prevSlide + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) =>
+      prevSlide === 0 ? totalSlides - 1 : prevSlide - 1
+    );
+  };
 
   return (
-    <>
+    <div className="animais-resgatados--container">
       <div className="animais-resgatados--background">
         <div className="title-container">
           <div className="title-content">
@@ -54,37 +130,46 @@ export default function AnimaisResgatados() {
 
       <div className="horses-cards--background">
         <div className="horses-cards--container">
-          <button className="button prev">
-            <img src={previousButton} alt="" />
+          <button className="button prev" onClick={prevSlide}>
+            <img src={previousButton} alt="Previous" />
           </button>
           <div className="horses-cards">
-            {cavalos.map((cavalo, index) => (
-              <CavaloCard
-                key={index}
-                nome={cavalo.nome}
-                sexo={cavalo.sexo}
-                img={cavalo.img}
-                alt={cavalo.alt}
-                idade={cavalo.idade}
-                qualidades={cavalo.qualidades}
-                descricao={cavalo.descricao}
-              />
-            ))}
+            {cavalos
+              .slice(currentSlide * 3, (currentSlide + 1) * 3)
+              .map((cavalo, index) => (
+                <CavaloCard
+                  key={index}
+                  nome={cavalo.nome}
+                  sexo={cavalo.sexo}
+                  img={cavalo.img}
+                  alt={cavalo.alt}
+                  idade={cavalo.idade}
+                  qualidades={cavalo.qualidades}
+                  descricao={cavalo.descricao}
+                />
+              ))}
           </div>
-          <button className="button next">
-            <img src={nextButton} alt="" />
+          <button className="button next" onClick={nextSlide}>
+            <img src={nextButton} alt="Next" />
           </button>
         </div>
       </div>
 
       <div className="current-slides--background">
         <div className="current-slides--container">
-          <span className="current-slides"></span>
-          <span className="current-slides"></span>
-          <span className="current-slides"></span>
+          {Array.from({ length: totalSlides }).map((_, index) => (
+            <span
+              key={index}
+              className={
+                index === currentSlide
+                  ? "current-slides active"
+                  : "current-slides"
+              }
+            ></span>
+          ))}
         </div>
         <Botao text={"Quero ser padrinho"} />
       </div>
-    </>
+    </div>
   );
 }

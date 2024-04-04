@@ -35,5 +35,30 @@
 }
 
 .doacoes-img {
-  max-width: 570px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media Query para telas menores */
+@media screen and (max-width: 768px) {
+  .doacoes-container {
+    padding: 30px 20px; /* Reduza ainda mais o preenchimento */
+    background: #d9d9d9;
+  }
+
+  .doacoes-text--title h2 {
+    font-size: 28px; /* Reduza mais o tamanho da fonte */
+  }
+
+  .doacoes-text--title p {
+    font-size: 16px; /* Reduza mais o tamanho da fonte */
+  }
+
+  .doacoes-text--content h3 {
+    font-size: 18px; /* Reduza mais o tamanho da fonte */
+  }
+
+  .doacoes-img {
+    display: none;
+  }
 }

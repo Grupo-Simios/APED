@@ -4,6 +4,7 @@
   padding: 150px 0;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -37,6 +38,10 @@
 .doacoes-img {
   max-width: 100%;
   height: auto;
+}
+
+.doacoes-img img {
+  width: 100%;
 }
 
 /* Media Query para telas menores */

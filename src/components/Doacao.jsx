@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 import pixIcon from "../assets/icons/pix-icon.svg";
 import wppIcon from "../assets/icons/wpp-icon.svg";
@@ -9,18 +9,14 @@ import "../styles/Doacao.css";
 import DoacaoItem from "./DoacaoItem";
 
 export default function Doacao() {
-  // Inicializa o Mercado Pago
-  useEffect(() => {
-    initMercadoPago("TEST-9ca55a34-86f9-4444-b4ed-a856257a400a");
-  }, []);
+  initMercadoPago("TEST-9ca55a34-86f9-4444-b4ed-a856257a400a");
 
-  // Estado para armazenar o ID de preferência
   const [preferenceId, setPreferenceId] = useState(null);
-  const [orderData, setOrderData] = useState({
-    title: "Meu produto",
-    quantity: "1",
-    price: "5",
-  });
+  const orderData = {
+    title: "Doação",
+    quantity: 1,
+    price: 5,
+  };
 
   const handleClick = () => {
     fetch("http://localhost:3000/create_order", {
@@ -28,7 +24,7 @@ export default function Doacao() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(orderData),
+      body: JSON.parse(orderData),
     })
       .then((response) => response.json())
       .then((preference) => {
@@ -54,7 +50,6 @@ export default function Doacao() {
             <DoacaoItem img={pixIcon} text={"CNPJ: 00.000.000/0001-11"} />
             <div>
               <button onClick={handleClick}>Doar</button>
-
               <Wallet
                 initialization={{ preferenceId }}
                 customization={{ texts: { valueProp: "smart_option" } }}

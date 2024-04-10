@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 import pixIcon from "../assets/icons/pix-icon.svg";
 import wppIcon from "../assets/icons/wpp-icon.svg";
 import emailIcon from "../assets/icons/email-icon.svg";
@@ -7,32 +5,30 @@ import cavalosImg from "../assets/cavalos/cavalos.png";
 import Botao from "./Botao";
 import "../styles/Doacao.css";
 import DoacaoItem from "./DoacaoItem";
+import { useState } from "react";
+import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 
 export default function Doacao() {
-  initMercadoPago("TEST-9ca55a34-86f9-4444-b4ed-a856257a400a");
-
+  initMercadoPago("TEST-561a9eb9-a9a0-4fe6-94d9-498e3470605d");
   const [preferenceId, setPreferenceId] = useState(null);
-  const orderData = {
-    title: "Doação",
-    quantity: 1,
-    price: 5,
-  };
 
-  const handleClick = () => {
-    fetch("http://localhost:3000/create_order", {
+  const handleClick = async () => {
+    const orderData = {
+      title: "Doação",
+      quantity: "1",
+      price: "5",
+    };
+
+    const response = await fetch("http://localhost:3000/create_preference", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.parse(orderData),
-    })
-      .then((response) => response.json())
-      .then((preference) => {
-        setPreferenceId(preference.id);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+      body: JSON.stringify(orderData),
+    });
+
+    const preference = await response.json();
+    setPreferenceId(preference.id);
   };
 
   return (
@@ -48,13 +44,13 @@ export default function Doacao() {
           <div className="doacoes-text--content">
             <h3>Canais de doação</h3>
             <DoacaoItem img={pixIcon} text={"CNPJ: 00.000.000/0001-11"} />
-            <div>
-              <button onClick={handleClick}>Doar</button>
+            <button onClick={handleClick}>DOAR</button>
+            {preferenceId && (
               <Wallet
                 initialization={{ preferenceId }}
                 customization={{ texts: { valueProp: "smart_option" } }}
               />
-            </div>
+            )}
           </div>
           <div className="doacoes-text--content">
             <h3>Entre em contato</h3>

@@ -1,29 +1,32 @@
 @import "./gerais.css";
 
 .duvidas-background {
-  background: #e9f0e6;
+  background: #f7e6d5;
 }
 
 .duvidas-container {
-  margin: 0 auto;
-  padding: 100px 0;
   max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 0;
+  padding-bottom: 100px;
 }
 
 .section-title {
-  width: 300px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   margin-top: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .duvidas-container h2 {
-  font-size: 56px;
-  background: linear-gradient(to bottom, #507741, #25371e);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);
+  font-size: 48px;
+  color: #424530;
+}
+
+@media screen and (max-width: 768px) {
+  .duvidas-container h2 {
+    font-size: 24px;
+  }
 }

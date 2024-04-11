@@ -1,94 +1,44 @@
 @import "./gerais.css";
 
-.horse-name,
-.title {
-  color: #304727;
-  font-family: "Roboto";
-  font-size: 39px;
+.horse-card {
+  max-width: 340px;
+}
+
+.horse-name {
+  color: #424530;
+  font-size: 32px;
 }
 
 .horse-name--card {
-  max-width: 265px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #555555;
-  margin-bottom: 20px;
+  max-width: 339px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #cccdc7;
+  margin-bottom: 5px;
 }
 
 .horse-name--card img {
   margin-left: 10px;
-  height: 25px;
 }
 
-.horse-image--container {
-  padding: 0px;
-  width: 290px;
-  border-right: 1px solid #555555;
-  max-height: 355px;
-}
-
-.horse-image {
-  max-width: 265px;
-  margin: 0;
+.cavalo-image {
+  max-width: 100%;
 }
 
 .text-container {
   display: flex;
   flex-direction: column;
-  max-width: 265px;
 }
 
-.idade {
-  font-family: "Roboto";
-  font-size: 16px;
+.text-container span {
+  font-size: 20px;
   font-weight: bold;
-  color: #304727;
+  color: #e09132;
   margin: 10px 0;
 }
 
-.qualities-container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.quality {
-  font-family: "Roboto";
-  font-size: 12px;
-  font-weight: bold;
-  color: white;
-  background: #304727;
-  padding: 8px 15px;
-  border-radius: 12px;
-}
-
-.desc {
-  font-family: "Roboto";
-  font-size: 14px;
+.text-container p {
+  font-size: 16px;
   color: #707070;
-}
-
-/* Responsive */
-
-@media screen and (max-width: 1100px) {
-  .horses-cards {
-    max-width: 900px;
-  }
-  .horse-card {
-    max-width: 250px;
-  }
-
-  .horse-image--container {
-    border-right: 0;
-  }
-
-  .button {
-    width: 40px;
-    height: 40px;
-  }
-  .button img {
-    width: 20px;
-    height: 20px;
-    padding: 0px;
-  }
 }

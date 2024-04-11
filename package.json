@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node ./server/index.js",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
@@ -12,6 +12,9 @@
   },
   "dependencies": {
     "@mercadopago/sdk-react": "^0.0.19",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mercadopago": "^2.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

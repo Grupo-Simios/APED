@@ -1,17 +1,14 @@
 import { useState, useEffect, useMemo } from "react";
-import "../styles/AnimaisResgatados.css";
-import masculinoImage from "../assets/icons/sexo-masculino.svg";
+import cavalosData from "../script/cavalosData";
 import previousButton from "../assets/icons/previous-button.svg";
 import nextButton from "../assets/icons/next-button.svg";
 import CavaloCard from "./CavaloCard";
 import Botao from "./Botao";
-import cavalo1 from "../assets/cavalos/cavalo1.png";
-import cavalo2 from "../assets/cavalos/cavalo2.png";
-import cavalo3 from "../assets/cavalos/cavalo3.png";
+import "../styles/AnimaisResgatados.css";
 
 export default function AnimaisResgatados() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [slidesToShow, setSlidesToShow] = useState(3); 
+  const [slidesToShow, setSlidesToShow] = useState(3);
 
   useEffect(() => {
     const updateSlidesToShow = () => {
@@ -30,69 +27,7 @@ export default function AnimaisResgatados() {
     return () => window.removeEventListener("resize", updateSlidesToShow);
   }, []);
 
-  const [cavalos] = useState([
-    {
-      nome: "Atlas1",
-      sexo: masculinoImage,
-      img: cavalo1,
-      alt: "Cavalos marrom de olhos azuis",
-      idade: "12 anos",
-      qualidades: ["Dócil", "Brincalhão", "Calmo"],
-      descricao:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
-    },
-    {
-      nome: "Atlas2",
-      sexo: masculinoImage,
-      img: cavalo2,
-      alt: "Cavalos marrom de olhos azuis",
-      idade: "12 anos",
-      qualidades: ["Dócil", "Brincalhão", "Calmo"],
-      descricao:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
-    },
-    {
-      nome: "Atlas3",
-      sexo: masculinoImage,
-      img: cavalo3,
-      alt: "Cavalos marrom de olhos azuis",
-      idade: "12 anos",
-      qualidades: ["Dócil", "Brincalhão", "Calmo"],
-      descricao:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
-    },
-    {
-      nome: "Atlas4",
-      sexo: masculinoImage,
-      img: cavalo2,
-      alt: "Cavalos marrom de olhos azuis",
-      idade: "12 anos",
-      qualidades: ["Dócil", "Brincalhão", "Calmo"],
-      descricao:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
-    },
-    {
-      nome: "Atlas5",
-      sexo: masculinoImage,
-      img: cavalo1,
-      alt: "Cavalos marrom de olhos azuis",
-      idade: "12 anos",
-      qualidades: ["Dócil", "Brincalhão", "Calmo"],
-      descricao:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
-    },
-    {
-      nome: "Atlas6",
-      sexo: masculinoImage,
-      img: cavalo2,
-      alt: "Cavalos marrom de olhos azuis",
-      idade: "12 anos",
-      qualidades: ["Dócil", "Brincalhão", "Calmo"],
-      descricao:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Similique commodi ratione eius omnis delectus beatae repellendus sequi perferendis deserunt deleniti",
-    },
-    // Adicione mais cavalos aqui...
-  ]);
+  const [cavalos] = useState(cavalosData);
 
   const totalSlides = useMemo(
     () => Math.ceil(cavalos.length / slidesToShow),
@@ -116,7 +51,9 @@ export default function AnimaisResgatados() {
       <div className="animais-resgatados--background">
         <div className="title-container">
           <div className="title-content">
-            <h1 className="title">Animais Resgatados</h1>
+            <h1 className="title">
+              Animais disponíveis para receber padrinho ou madrinha
+            </h1>
           </div>
         </div>
       </div>
@@ -164,7 +101,7 @@ export default function AnimaisResgatados() {
             ></span>
           ))}
         </div>
-        <Botao text={"Quero ser padrinho"} />
+        <Botao text={"Quero ser padrinho(a)"} />
       </div>
     </div>
   );

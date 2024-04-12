@@ -5,23 +5,60 @@ import Duvida from "./Duvida";
 const duvidas = [
   {
     question: "O que fazer quando encontrar um cavalo machucado?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ex, repudiandae consectetur quis hic cum possimus voluptatem, nemo ullam doloremque sint doloribus ab. Illo, et similique eos vel quibusdam aliquid.",
+    answer: (
+      <>
+        {" "}
+        <p>
+          - Tire fotos, faça vídeos e anote informações relevantes, pois provas
+          visuais são importantes.
+        </p>{" "}
+        <p>
+          - Após isso, você deve ligar para a polícia, ou órgãos de proteção
+          animal, pois denunciar é fundamental para a intervenção no caso.
+        </p>
+        <p> - Passe a localização exata de onde o animal está.</p>
+        <p>
+          - Não o alimente ou dê água sem perguntar a um veterinário ou
+          protetor, caso o animal esteja deitado.
+        </p>
+        <br />
+        <p>Polícia - 190</p>
+        <p>Disque denúncia - 181</p>
+      </>
+    ),
   },
   {
     question: "Como ser um padrinho?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ex, repudiandae consectetur quis hic cum possimus voluptatem, nemo ullam doloremque sint doloribus ab. Illo, et similique eos vel quibusdam aliquid.",
+      "Para ser um padrinho ou madrinha, basta você entrar em contato conosco e escolher o animal que gostaria que fosse seu afilhado(a).",
   },
   {
     question: "Para onde vão as doações da ong?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ex, repudiandae consectetur quis hic cum possimus voluptatem, nemo ullam doloremque sint doloribus ab. Illo, et similique eos vel quibusdam aliquid.",
+      "Todas as doações são destinadas exclusivamente para cuidado e alimentação dos cavalos resgatados. Todos que trabalham para a ONG são voluntários, portanto o dinheiro arrecadado é de uso exclusivo para os animais, incluindo transporte deles quando necessário, melhorias nas instalações deles, compra de medicamentos, veterinário, feno, alfafa, ração, vacinas e muitos outros cuidados que eles necessitam.",
   },
   {
     question: "Como entro em contato para fazer doações?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ex, repudiandae consectetur quis hic cum possimus voluptatem, nemo ullam doloremque sint doloribus ab. Illo, et similique eos vel quibusdam aliquid.",
+    answer: (
+      <>
+        <p>Você nos encontra através do Instagram, ou do nosso e-mail.</p>
+        <p>
+          Mas para doar, você pode utilizar nossos canais de pix ou apoia-se
+        </p>
+        <p>Pix: CNPJ 51.780.372/0001/19</p>
+        <p>Apoia-se:</p>
+        <br />
+        <p>
+          <a
+            target="_blank"
+            style={{ color: "#777777" }}
+            href="https://apoia.se/grupoaped"
+          >
+            Acesse aqui e ajude mensalmente
+          </a>
+        </p>
+      </>
+    ),
   },
 ];
 
@@ -37,7 +74,7 @@ export default function Duvidas() {
       <div className="duvidas-background">
         <div className="duvidas-container">
           <div className="section-title">
-            <h2>Dúvidas</h2>
+            <h2>Dúvidas frequentes</h2>
           </div>
           {duvidas.map((duvida, index) => (
             <Duvida

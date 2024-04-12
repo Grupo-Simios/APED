@@ -5,48 +5,62 @@
 }
 
 .title-container {
-  max-width: 1440px;
+  max-width: 1400px;
   margin: 0px auto;
-  padding: 50px 0;
+  padding: 40px 0;
 }
 
 .title-content {
+  margin-left: 115px;
   display: flex;
   justify-content: right;
-  max-width: 400px;
-  border-bottom: 1px solid #555555;
+  max-width: 550px;
+}
+
+.title-container::after {
+  content: "";
+  display: block;
+  width: 500px;
+  height: 1px;
+  margin-top: 5px;
+  background: #cccdc7;
+}
+
+.title {
+  color: #424530;
+  font-size: 36px;
 }
 
 .horses-cards--background {
   background: #f7f7f7;
 }
 .horses-cards--container {
-  background: #f7f7f7;
-  margin: 0 auto;
-  max-width: 1400px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1400px;
   align-items: center;
 }
 
 .horses-cards {
-  width: 1050px;
+  width: 100%;
   display: flex;
+  gap: 20px;
   justify-content: space-around;
-  transition: transform 0.5s ease;
 }
 
 .current-slides--background {
   background: #f7f7f7;
-  padding: 50px 0;
+  padding: 10px 0;
+  padding-bottom: 80px;
 }
 
 .current-slides--container {
   display: flex;
   justify-content: center;
   margin: 0px auto;
-  padding: 50px 0;
+  padding: 30px 0;
   width: 300px;
 }
 
@@ -54,9 +68,10 @@
   content: " ";
   margin: 0 auto;
   display: flex;
-  width: 120px;
-  height: 8px;
+  width: 50px;
+  height: 4px;
   background: #d9d9d9;
+  border-radius: 2px;
 }
 
 .current-slides.active::before {

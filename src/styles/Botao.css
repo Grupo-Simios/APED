@@ -8,18 +8,17 @@
 }
 
 .button-container button {
-  font-size: 14px;
-  color: #28291d;
+  font-size: 20px;
   font-weight: bold;
-  border: 2px solid black;
+  color: #ffffff;
   border-radius: 12px;
-  background: #f7f7f7;
+  background: #da8e31;
   padding: 12px 100px;
   max-width: 500px;
+  transition: all 0.3s ease-in;
 }
 
 .button-container button:hover {
   cursor: pointer;
-  color: #f7f7f7;
-  background: linear-gradient(to bottom, #507741, #25371e);
+  background: rgb(175, 96, 0);
 }

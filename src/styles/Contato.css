@@ -1,0 +1,50 @@
+@import "./gerais.css";
+
+.contato-background {
+  background-color: #424530;
+}
+
+.contato-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contato-items {
+  display: block;
+  text-align: right;
+  max-width: 350px;
+}
+
+.contato-items h1 {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  max-width: 350px;
+}
+
+.contato-item {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.contato-item img {
+  width: 20px;
+}
+
+.contato-item p {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.contato-item a {
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+}

@@ -1,69 +1,141 @@
 @import "./gerais.css";
 
-.doacoes-container {
-  padding: 150px 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.doacao-background {
+  background-color: #ffffff;
+}
+
+.doacao-container {
   max-width: 1400px;
+  height: 400px;
   margin: 0 auto;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.doacoes-text--title {
-  max-width: 435px;
-  margin-top: 10px;
+.qr-code {
+  margin-right: 20px;
 }
 
-.doacoes-text--title h2 {
-  color: #304727;
-  font-size: 56px;
-  margin-bottom: 20px;
-}
-
-.doacoes-text--title p {
-  color: #555555;
-  font-size: 24px;
-}
-
-.doacoes-text--content {
-  margin: 40px 0;
-}
-
-.doacoes-text--content h3 {
-  font-size: 24px;
-  color: #304727;
-  margin-bottom: 2px;
-}
-
-.doacoes-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.doacoes-img img {
+.doacao-formas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
 }
 
+.doacao-formas--item {
+  display: block;
+  margin-top: 20px;
+}
+
+.doacao-item--title {
+  display: flex;
+  margin-bottom: 4px;
+}
+
+.doacao-formas--item p {
+  margin-top: 3px;
+  color: #424530;
+  font-size: 18px;
+}
+
+.doacao-formas--item a {
+  color: #424530;
+  font-size: 18px;
+}
+
+.doacao-item--title img {
+  max-width: 20px;
+  margin-right: 10px;
+}
+
+.doacao-item--title h2 {
+  font-size: 20px;
+  color: #424530;
+}
+
+h1 {
+  font-size: 48px;
+  color: #424530;
+  width: 950px;
+  text-align: right;
+}
+
+#valor {
+  font-size: 16px;
+  border: 1px solid black;
+  width: 110px;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin-top: 4px;
+}
+
+.mpbutton {
+  max-width: 300px;
+}
+
+.doar-button {
+  margin-left: 10px;
+  padding: 6px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+  background: #da8e31;
+  color: #ffffff;
+  transition: all 0.3s ease-in;
+}
+
+.doar-button:hover {
+  cursor: pointer;
+  background-color: rgb(175, 96, 0);
+}
+
 /* Media Query para telas menores */
+@media screen and (max-width: 880px) {
+  .title-section {
+    font-size: 38px;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .doacoes-container {
-    padding: 30px 20px; /* Reduza ainda mais o preenchimento */
-    background: #d9d9d9;
+  .doacao-container {
+    height: 700px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
   }
 
-  .doacoes-text--title h2 {
-    font-size: 28px; /* Reduza mais o tamanho da fonte */
+  .title-section {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
   }
 
-  .doacoes-text--title p {
-    font-size: 16px; /* Reduza mais o tamanho da fonte */
+  .doacao-formas--item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
 
-  .doacoes-text--content h3 {
-    font-size: 18px; /* Reduza mais o tamanho da fonte */
+  .doacao-item--title {
+    display: flex;
+    justify-content: center;
   }
 
-  .doacoes-img {
-    display: none;
+  #valor {
+    margin: 0 auto;
+    width: 200px;
+  }
+
+  .doar-button {
+    margin: 5px auto;
+  }
+
+  .qr-code {
+    margin: 0 auto;
   }
 }

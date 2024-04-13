@@ -101,7 +101,7 @@ h1 {
 
 @media screen and (max-width: 768px) {
   .doacao-container {
-    height: 700px;
+    height: 900px;
     max-width: 300px;
     display: flex;
     flex-direction: column-reverse;
@@ -119,6 +119,8 @@ h1 {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin: 10px 0;
+    padding: 10px 0;
   }
 
   .doacao-item--title {
@@ -127,8 +129,8 @@ h1 {
   }
 
   #valor {
-    margin: 0 auto;
-    width: 200px;
+    margin: 5px auto;
+    width: 80px;
   }
 
   .doar-button {

@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <>
       <div className="contato-background">
-        <section className="contato-container">
+        <footer className="contato-container">
           <img src={apedLogo} alt="" />
           <div className="contato-items">
             <h1>Entre em contato conosco:</h1>
@@ -22,8 +22,13 @@ export default function Footer() {
               <img src={instaIcon} alt="" />
             </div>
           </div>
-        </section>
+        </footer>
       </div>
+          <div className="simios-background">
+            <div className="simios-container">
+              <p></p>
+            </div>
+          </div>
     </>
   );
 }

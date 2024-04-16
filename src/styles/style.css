@@ -63,276 +63,156 @@ header nav ul li {
 
 /* TOPO DO SITE */
 
-section .topo-do-site {
-  padding: 40px 4%;
+.conheca-mais-background {
+  background: #ffffff;
 }
 
-section .topo-do-site .flex {
+.conheca-mais-container {
+  margin: 0 auto;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 90px;
+  padding: 100px 60px;
 }
 
-.topo-do-site h1 {
-  color: #304727;
+.txt-topo-site {
+  max-width: 550px;
+}
+
+.txt-topo-site h1 {
+  color: #424530;
   font-size: 56px;
-  line-height: 60px;
-  margin-left: 10px;
-  margin-top: 190px;
+  font-weight: bold;
+  text-align: left;
+  max-width: 380px;
 }
 
-.topo-do-site .txt-topo-site p {
-  font-size: 20px;
+.txt-topo-site p {
   color: #707070;
-  margin: 40px 0px;
-  margin-top: 30px;
-  margin-left: 10px;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
-.img-topo img {
-  width: 680px;
-  margin-top: -400px;
-  margin-left: 600px;
+.btn-quero-ajudar {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 12px;
+  background: #da8e31;
+  padding: 12px 50px;
+  max-width: 300px;
+  margin-top: 40px;
+  transition: all 0.3s ease-in;
+}
+
+.btn-quero-ajudar:hover {
+  cursor: pointer;
+  background: rgb(175, 96, 0);
+}
+
+.img-section img {
+  width: 100%;
+  min-width: 400px;
 }
 
 /* CARDS */
+.missoes-background {
+  background: #ffffff;
+}
+
+.missoes-container {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 30px 0px;
+}
 
 .retangulo-cards {
-  position: absolute;
-  width: 1166px;
-  height: 255.8px;
-  left: calc(50% - 1166px / 2);
-  top: 800px;
-  background: #304727;
-  border-radius: 29.7851px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  max-width: 1310px;
+  height: 400px;
+  background: #e09132;
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  box-shadow: inset 0px 150px white;
 }
 
-.retangulo-cards .card-1 {
-  position: absolute;
-  width: 262.81px;
-  height: 289.09px;
-  left: 45px;
-  top: -70px;
+.card {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 375px;
+  height: 340px;
   background: #f8f8f8;
-  box-shadow: -1.75207px -4.38017px 5.43141px rgba(0, 0, 0, 0.25);
-  border-radius: 37.6694px;
+  box-shadow: 8px -0px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  padding: 0px 30px;
 }
 
-.retangulo-cards .card-2 {
-  position: absolute;
-  width: 262.81px;
-  height: 289.09px;
-  left: 450px;
-  top: -70px;
-  background: #f8f8f8;
-  box-shadow: -1.75207px -4.38017px 5.43141px rgba(0, 0, 0, 0.25);
-  border-radius: 37.6694px;
+.card img {
+  width: 70px;
 }
 
-.retangulo-cards .card-3 {
-  position: absolute;
-  width: 262.81px;
-  height: 289.09px;
-  left: 855px;
-  top: -70px;
-  background: #f8f8f8;
-  box-shadow: -1.75207px -4.38017px 5.43141px rgba(0, 0, 0, 0.25);
-  border-radius: 37.6694px;
+.card h2 {
+  color: #2f2f2f;
+  font-size: 35px;
 }
 
-/* PARTES DO TEXTO */
-
-.retangulo-cards .card-1 h2 {
-  /* Missão */
-
-  position: absolute;
-  width: 115px;
-  height: 41px;
-  left: 70px;
-  top: 120px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 35.0413px;
-  line-height: 41px;
-  color: #353535;
-}
-
-.retangulo-cards .card-1 p {
-  position: absolute;
-  width: 214.63px;
-  height: 103.37px;
-  left: 30px;
-  top: 180px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14.0165px;
-  line-height: 16px;
+.card p {
+  color: #2f2f2f;
+  font-size: 16px;
   text-align: center;
-  color: #353535;
-}
-
-/* CARD 2 */
-
-.retangulo-cards .card-2 h2 {
-  /* Visão */
-
-  position: absolute;
-  width: 115px;
-  height: 41px;
-  left: 85px;
-  top: 120px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 35.0413px;
-  line-height: 41px;
-  color: #353535;
-}
-
-.retangulo-cards .card-2 p {
-  position: absolute;
-  width: 214.63px;
-  height: 103.37px;
-  left: 30px;
-  top: 180px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14.0165px;
-  line-height: 16px;
-  text-align: center;
-  color: #353535;
-}
-
-/* CARD 3 */
-
-.retangulo-cards .card-3 h2 {
-  /* Valores*/
-
-  position: absolute;
-  width: 115px;
-  height: 41px;
-  left: 70px;
-  top: 120px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 35.0413px;
-  line-height: 41px;
-  color: #353535;
-}
-
-.retangulo-cards .card-3 p {
-  position: absolute;
-  width: 214.63px;
-  height: 103.37px;
-  left: 30px;
-  top: 180px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14.0165px;
-  line-height: 16px;
-  text-align: center;
-  color: #353535;
-}
-
-/* ICONS */
-
-.retangulo-cards .card-1 img {
-  position: absolute;
-  width: 70.08px;
-  height: 70.1px;
-  left: 90px;
-  top: 30px;
-}
-
-.retangulo-cards .card-2 img {
-  position: absolute;
-  width: 70.08px;
-  height: 70.1px;
-  left: 90px;
-  top: 30px;
-}
-
-.retangulo-cards .card-3 img {
-  position: absolute;
-  width: 70.08px;
-  height: 70.1px;
-  left: 90px;
-  top: 30px;
+  line-height: 20px;
 }
 
 /* segunda seção*/
 
-.section-2 {
-  position: relative;
-  width: 1536px;
-  height: 695px;
-  margin-top: 45px;
-  background: #304727;
-  top: 470px;
+.section-2--background {
+  background: #424530;
+}
+
+.section-2--container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  max-width: 1400px;
+  padding: 50px 40px;
+  margin: 0 auto;
+}
+
+.img-secao {
+  max-width: 620px;
+  min-width: 350px;
 }
 
 .img-secao img {
-  position: absolute;
-  width: 627px;
-  height: 466px;
-  left: 92px;
-  top: 99px;
-  border-radius: 23px;
+  width: 100%;
+  border-radius: 16px;
 }
 
-.text-1 h2 {
-  /* O que é ser um padrinho? */
-
-  position: absolute;
-  width: 458px;
-  height: 47px;
-  left: 799px;
-  top: 71px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 35px;
-  line-height: 47px;
-  color: #fcf4eb;
+.section2-text--container {
+  max-width: 620px;
 }
 
-.text-1 p {
-  position: absolute;
-  width: 506px;
-  height: 161px;
-  left: 799px;
-  top: 132px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 23px;
-  color: #f7f7f7;
+.section-2--text {
+  margin-bottom: 50px;
 }
 
-.text-2 h2 {
-  /* Porque ser um padrinho? */
-
-  position: absolute;
-  width: 273px;
-  height: 94px;
-  left: 799px;
-  top: 313px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 35px;
-  line-height: 47px;
-  color: #fcf4eb;
+.section-2--text h2 {
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.text-2 p {
-  position: absolute;
-  width: 506px;
-  height: 138px;
-  left: 799px;
-  top: 427px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 23px;
-  color: #f7f7f7;
+.section-2--text p {
+  font-size: 18px;
+  color: #ffffff;
 }
 
 /* rolagem do site */

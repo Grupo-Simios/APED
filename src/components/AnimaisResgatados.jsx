@@ -101,7 +101,7 @@ export default function AnimaisResgatados() {
             ></span>
           ))}
         </div>
-        <Botao text={"Quero ser padrinho(a)"} />
+        <Botao text={"Quero ser um padrinho(a)"} />
       </div>
     </div>
   );

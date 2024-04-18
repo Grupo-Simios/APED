@@ -13,7 +13,7 @@
   color: #ffffff;
   border-radius: 12px;
   background: #da8e31;
-  padding: 12px 100px;
+  padding: 12px 80px;
   max-width: 500px;
   transition: all 0.3s ease-in;
 }
@@ -21,4 +21,10 @@
 .button-container button:hover {
   cursor: pointer;
   background: rgb(175, 96, 0);
+}
+
+@media screen and (max-width: 768px) {
+  .button-container button {
+    padding: 15px 40px;
+  }
 }

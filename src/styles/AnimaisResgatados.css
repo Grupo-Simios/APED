@@ -20,7 +20,7 @@
 .title-container::after {
   content: "";
   display: block;
-  width: 500px;
+  max-width: 530px;
   height: 1px;
   margin-top: 5px;
   background: #cccdc7;
@@ -39,7 +39,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0px;
   max-width: 1400px;
   align-items: center;
 }
@@ -49,6 +49,7 @@
   display: flex;
   gap: 20px;
   justify-content: space-around;
+  padding: 20px 0;
 }
 
 .current-slides--background {
@@ -85,10 +86,10 @@
   align-items: center;
   cursor: pointer;
   background: #f7f7f7;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  padding: 15px;
+  padding: 10px;
   transition: all 0.3s ease;
 }
 
@@ -97,8 +98,22 @@
 }
 
 @media screen and (max-width: 768px) {
+  .title-content {
+    margin: 0;
+    max-width: 300px;
+    padding: 0 30px;
+  }
+
   .title-container {
-    display: none;
+    display: block;
+  }
+
+  .title-container::after {
+    max-width: 250px;
+  }
+
+  .title-content h1 {
+    font-size: 23px;
   }
 
   .horses-cards--container {
@@ -111,6 +126,14 @@
   }
 
   .current-slides::before {
-    width: 40px;
+    width: 30px;
+  }
+
+  .current-slides--background {
+    padding: 0 30px;
+  }
+
+  .current-slides--background button {
+    margin-bottom: 60px;
   }
 }

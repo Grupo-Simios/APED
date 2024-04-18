@@ -11,6 +11,7 @@ h1,
 h2,
 h3,
 p,
-span {
+span,
+a {
   font-family: "Roboto";
 }

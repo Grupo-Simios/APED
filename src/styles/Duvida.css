@@ -17,6 +17,7 @@
 .duvidas-content--title h3 {
   font-size: 25px;
   color: #ffffff;
+  margin-right: 10px;
 }
 
 .duvidas-content--title:hover {

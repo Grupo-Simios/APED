@@ -7,7 +7,7 @@
 .duvidas-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 10px 0;
+  padding: 10px 30px;
   padding-bottom: 100px;
 }
 
@@ -16,7 +16,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -26,6 +26,12 @@
 }
 
 @media screen and (max-width: 768px) {
+  .duvidas-container {
+    padding: 30px 10px;
+    padding-bottom: 70px;
+    gap: 20px;
+  }
+
   .duvidas-container h2 {
     font-size: 24px;
   }

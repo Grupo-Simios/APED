@@ -24,6 +24,9 @@ export default function Footer() {
           </div>
         </footer>
       </div>
+      <div className="grupo-simios">
+        <a href="@gruposimios"></a>
+      </div>
           <div className="simios-background">
             <div className="simios-container">
               <p></p>

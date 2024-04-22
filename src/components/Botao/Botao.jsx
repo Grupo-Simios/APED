@@ -1,4 +1,4 @@
-import "../styles/Botao.css";
+import "./Botao.css";
 
 export default function Botao({ text }) {
   return (

@@ -1,4 +1,4 @@
-@import "./gerais.css";
+@import "../../styles/gerais.css";
 
 .button-container {
   max-width: 500px;

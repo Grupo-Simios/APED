@@ -1,10 +1,10 @@
 import { useState, useEffect, useMemo } from "react";
-import cavalosData from "../script/cavalosData";
-import previousButton from "../assets/icons/previous-button.svg";
-import nextButton from "../assets/icons/next-button.svg";
-import CavaloCard from "./CavaloCard";
-import Botao from "./Botao";
-import "../styles/AnimaisResgatados.css";
+import cavalosData from "../../script/cavalosData";
+import previousButton from "../../assets/icons/previous-button.svg";
+import nextButton from "../../assets/icons/next-button.svg";
+import CavaloCard from "../CavaloCard/CavaloCard";
+import Botao from "../Botao/Botao";
+import "./AnimaisResgatados.css";
 
 export default function AnimaisResgatados() {
   const [currentSlide, setCurrentSlide] = useState(0);

@@ -1,0 +1,99 @@
+@import "../../styles/gerais.css";
+
+.conheca-mais-background {
+  background: #ffffff;
+}
+
+.conheca-mais-container {
+  margin: 0 auto;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 60px;
+}
+
+.txt-topo-site {
+  max-width: 550px;
+}
+
+.txt-topo-site h1 {
+  color: #424530;
+  font-size: 56px;
+  font-weight: bold;
+  text-align: left;
+  max-width: 380px;
+}
+
+.txt-topo-site p {
+  color: #707070;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.btn-quero-ajudar {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 12px;
+  background: #da8e31;
+  padding: 12px 50px;
+  max-width: 300px;
+  margin-top: 40px;
+  transition: all 0.3s ease-in;
+}
+
+.btn-quero-ajudar:hover {
+  cursor: pointer;
+  background: rgb(175, 96, 0);
+}
+
+.img-section img {
+  width: 100%;
+  min-width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .conheca-mais-container {
+    flex-direction: column-reverse;
+    padding: 0;
+    margin: 0;
+  }
+
+  .img-section {
+    background-image: url("../assets/cavalos/cavalinho.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-section img {
+    visibility: hidden;
+  }
+
+  .txt-topo-site {
+    max-width: 450px;
+    margin: 0;
+    padding: 30px 30px;
+  }
+
+  .txt-topo-site h1 {
+    max-width: 250px;
+    font-size: 28px;
+  }
+
+  .txt-topo-site p {
+    font-size: 14px;
+  }
+
+  .txt-topo-site button {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+
+  .btn-quero-ajudar {
+    max-width: 100%;
+  }
+}

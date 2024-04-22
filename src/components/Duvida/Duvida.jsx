@@ -1,6 +1,6 @@
-import closedIcon from "../assets/icons/closed-icon.svg";
-import openedIcon from "../assets/icons/opened-icon.svg";
-import "../styles/Duvida.css";
+import closedIcon from "../../assets/icons/closed-icon.svg";
+import openedIcon from "../../assets/icons/opened-icon.svg";
+import "./Duvida.css";
 
 export default function Duvida({ question, answer, isOpened, toggle }) {
   return (

@@ -1,6 +1,6 @@
-import "../styles/Duvidas.css";
+import "./Duvidas.css";
 import { useState } from "react";
-import Duvida from "./Duvida";
+import Duvida from "../Duvida/Duvida";
 
 const duvidas = [
   {

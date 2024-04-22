@@ -1,8 +1,8 @@
-import pixIcon from "../assets/icons/pix-icon.svg";
-import qrcode from "../assets/icons/qrcode.svg";
-import mpago from "../assets/icons/mercado-pago.svg";
-import coracao from "../assets/icons/coracao.svg";
-import "../styles/Doacao.css";
+import pixIcon from "../../assets/icons/pix-icon.svg";
+import qrcode from "../../assets/icons/qrcode.svg";
+import mpago from "../../assets/icons/mercado-pago.svg";
+import coracao from "../../assets/icons/coracao.svg";
+import "./Doacao.css";
 import { useState } from "react";
 import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 

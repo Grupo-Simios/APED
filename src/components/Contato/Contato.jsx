@@ -25,7 +25,8 @@ export default function Footer() {
           </div>
         </footer>
       </div>
-<<<<<<< HEAD:src/components/Contato.jsx
+
+  
       <div className="footer_text">
                 <a target="_blank" href="gruposimios.html">@Gruposímios</a>
       </div>
@@ -34,13 +35,11 @@ export default function Footer() {
               <p></p>
             </div>
           </div>
-=======
       <div className="simios-background">
         <div className="simios-container">
           <p></p>
         </div>
       </div>
->>>>>>> 0f1194fb315d94388ed833d6e6edbe2de0380e61:src/components/Contato/Contato.jsx
     </>
-  );
+  )
 }

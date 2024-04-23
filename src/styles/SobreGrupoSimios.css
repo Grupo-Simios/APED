@@ -1,0 +1,86 @@
+.title_header > a:visited{
+    color: var(--title-color);
+  }
+
+  .title_header {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    padding: 1.25rem;
+    color: #424530;
+  }
+  
+  .section_text {
+    margin: 0em;
+    padding: 5em;
+    text-align: center;
+    background-color: #424530;
+    border-radius: 30px;
+  }
+  
+  .section_text_title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.375rem;
+    color: #fff;
+    margin: 10px;
+  }
+  
+  .section_text_paragraph {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: #fff;
+  }
+
+  .section_gruposimios_title_simios {
+    text-align: center;
+    color: #424530;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+  }
+  
+  .section_gruposimios {
+    font-family: 'Roboto', sans-serif;
+    margin: 1em;
+    padding: 30px;
+  }
+
+  .section_presentation {
+    margin-left: 300px;
+  }
+  
+   /* Estilo para o contêiner dos cards */
+   .card-container {
+    display: flex; 
+    justify-content: space-around; 
+    margin: 50px; 
+    
+  }
+
+  /* Estilo para cada card */
+  .card {
+    width: 230px; 
+    height: 220px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #424530; 
+    border-radius: 30px; 
+  } 
+
+  .card h2 {
+    margin-left: 23px;
+    padding: 10px;
+  }
+
+  .card p {
+    margin-left: 25px;
+  }
+
+  
+
+  .card a {
+    color: #424530;
+    text-decoration: none;
+    margin-left: 85px;
+    line-height: 25px;
+  }

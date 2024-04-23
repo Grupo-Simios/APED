@@ -3,6 +3,7 @@ import instaIcon from "../assets/icons/insta-icon.svg";
 import apedLogo from "../assets/icons/aped-logo.svg";
 import "../styles/Contato.css";
 
+
 export default function Footer() {
   return (
     <>
@@ -24,8 +25,8 @@ export default function Footer() {
           </div>
         </footer>
       </div>
-      <div className="grupo-simios">
-        <a href="@gruposimios"></a>
+      <div className="footer_text">
+                <a target="_blank" href="gruposimios.html">@Gruposímios</a>
       </div>
           <div className="simios-background">
             <div className="simios-container">

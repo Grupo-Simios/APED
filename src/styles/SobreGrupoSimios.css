@@ -1,5 +1,5 @@
 .title_header > a:visited{
-    color: var(--title-color);
+    color: #424530
   }
 
   .title_header {
@@ -75,8 +75,6 @@
   .card p {
     margin-left: 25px;
   }
-
-  
 
   .card a {
     color: #424530;

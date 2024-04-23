@@ -1,4 +1,4 @@
-import "../styles/CavaloCard.css";
+import "./CavaloCard.css";
 
 export default function CavalosCard({
   nome,
@@ -6,7 +6,6 @@ export default function CavalosCard({
   img,
   alt,
   idade,
-  qualidades,
   descricao,
 }) {
   return (

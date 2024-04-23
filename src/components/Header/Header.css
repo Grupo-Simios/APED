@@ -1,0 +1,50 @@
+@import "../../styles/gerais.css";
+
+header {
+  background-color: #424530;
+}
+
+.menu-desktop {
+  margin: 0 auto;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.menu-desktop ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.menu-desktop li {
+  list-style: none;
+  box-sizing: border-box;
+}
+
+header a {
+  color: #f5ddbf;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+header a:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.menu-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-mobile {
+    display: block;
+  }
+
+  .menu-desktop ul {
+    display: none;
+  }
+}

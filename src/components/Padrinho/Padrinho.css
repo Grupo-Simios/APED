@@ -1,0 +1,70 @@
+@import "../../styles/gerais.css";
+
+.section-2--background {
+  background: #424530;
+}
+
+.section-2--container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  padding: 50px 40px;
+  margin: 0 auto;
+}
+
+.img-secao {
+  width: 660px;
+  min-width: 350px;
+}
+
+.img-secao img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.section2-text--container {
+  max-width: 620px;
+}
+
+.section-2--text {
+  margin-bottom: 50px;
+}
+
+.section-2--text h2 {
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-2--text p {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .section-2--container {
+    flex-direction: column;
+    padding: 50px 30px;
+  }
+
+  .img-secao {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .img-secao img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .section-2--text h2 {
+    font-size: 20px;
+  }
+
+  .section-2--text p {
+    font-size: 14px;
+  }
+}

@@ -19,7 +19,7 @@ const cavalosData = [
     alt: "Cavalo branco de machas marrons tomando água em um lago",
     idade: "12 anos",
     descricao:
-      "Tuia foi resgatada em estado esquelético durante um ciclone que atingiu a nossa região, estava caída e abandonada em uma valeta. Já foi um lindo cavalo de competição, mas quando precisou de cuidados, foi abandonada por sua tutora para esperar sua morte. Tuia é doce, companheira, curiosa e adora estar na presença de pessoas. Sua recuperação foi muito difícil, ela não parava em pé sozinha, não conseguia se alimentar direito, mas hoje está quase recuperada!",
+      "Tuia foi resgatada em estado esquelético durante um ciclone que atingiu a nossa região, estava caída e abandonada em uma valeta. Já foi um lindo cavalo de competição, mas quando precisou de cuidados, foi abandonada por sua tutora para esperar sua morte.Tuia é doce, companheira, curiosa e adora estar na presença de pessoas. Sua recuperação foi muito difícil, ela não parava em pé sozinha, não conseguia se alimentar direito, mas hoje está quase recuperada!",
   },
   {
     nome: "Madona",
@@ -28,7 +28,7 @@ const cavalosData = [
     alt: "",
     idade: "12 anos",
     descricao:
-      "Madonna estava abandonada nas terras em que a ONG se instalou, magra, assustada e rotulada como “um gênio difícil de lidar”. Por causa disso, tentaram domá-la de formas extremamente bruscas, o que resultou em um acidente com o seu domador. Quando a ONG se estabeleceu, ela foi acolhida, assim como todos e aos poucos vem aprendendo a confiar novamente no ser humano. Uma égua de cabanha, marcada, mas que não escapou do abandono.",
+      "Madonna estava abandonada nas terras em que a ONG se instalou, magra, assustada e rotulada como “um gênio difícil de lidar”. Por causa disso, tentaram domá-la de formas extremamente bruscas, o que resultou em um acidente com o seu domador.Quando a ONG se estabeleceu, ela foi acolhida, assim como todos e aos poucos vem aprendendo a confiar novamente no ser humano. Uma égua de cabanha, marcada, mas que não escapou do abandono.",
   },
   {
     nome: "Esperança",

@@ -1,4 +1,4 @@
-@import "./gerais.css";
+@import "../../styles/gerais.css";
 
 .contato-background {
   background-color: #424530;
@@ -7,7 +7,7 @@
 .contato-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 100px 30px;
   display: flex;
   justify-content: space-between;
 }

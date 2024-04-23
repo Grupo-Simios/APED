@@ -1,7 +1,7 @@
-import emailIcon from "../assets/icons/email-icon.svg";
-import instaIcon from "../assets/icons/insta-icon.svg";
-import apedLogo from "../assets/icons/aped-logo.svg";
-import "../styles/Contato.css";
+import emailIcon from "../../assets/icons/email-icon.svg";
+import instaIcon from "../../assets/icons/insta-icon.svg";
+import apedLogo from "../../assets/icons/aped-logo.svg";
+import "./Contato.css";
 
 
 export default function Footer() {
@@ -25,6 +25,7 @@ export default function Footer() {
           </div>
         </footer>
       </div>
+<<<<<<< HEAD:src/components/Contato.jsx
       <div className="footer_text">
                 <a target="_blank" href="gruposimios.html">@Gruposímios</a>
       </div>
@@ -33,6 +34,13 @@ export default function Footer() {
               <p></p>
             </div>
           </div>
+=======
+      <div className="simios-background">
+        <div className="simios-container">
+          <p></p>
+        </div>
+      </div>
+>>>>>>> 0f1194fb315d94388ed833d6e6edbe2de0380e61:src/components/Contato/Contato.jsx
     </>
   );
 }

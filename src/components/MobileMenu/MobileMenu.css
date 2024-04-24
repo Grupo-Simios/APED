@@ -36,8 +36,8 @@
 
   .mobile-modal--container button {
     position: absolute;
-    top: 40px;
-    right: 20px;
+    top: 20px;
+    right: 30px;
     padding: 0;
     color: #ffffff;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.25);

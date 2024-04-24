@@ -1,7 +1,18 @@
+import { useState } from "react";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import "./Header.css";
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
       <header>
@@ -11,6 +22,7 @@ export default function Header() {
             className="menu-mobile"
             src="src/assets/icons/menu-mobile.svg"
             alt=""
+            onClick={toggleMenu}
           />
           <ul>
             <li>
@@ -31,7 +43,7 @@ export default function Header() {
           </ul>
         </nav>
       </header>
-      <MobileMenu />
+      {isMenuOpen && <MobileMenu closeMenu={closeMenu} />} {/* Passando a função closeMenu */}
     </>
   );
 }

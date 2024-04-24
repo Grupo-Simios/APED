@@ -1,4 +1,6 @@
 import "./ConhecaMais.css";
+import cavalosImage from "../../assets/cavalos/cavalos.svg";
+import cavalinho from "../../assets/cavalos/cavalos.svg";
 
 export default function ConhecaMais() {
   return (
@@ -17,7 +19,7 @@ export default function ConhecaMais() {
             <button className="btn-quero-ajudar">Quero ajudar!</button>
           </div>
           <div className="img-section">
-            <img src="./src/assets/cavalos/cavalos.svg" alt="" />
+            <img src={cavalosImage} alt="" />
           </div>
         </section>
       </div>

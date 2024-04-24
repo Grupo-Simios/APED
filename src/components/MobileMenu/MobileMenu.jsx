@@ -1,12 +1,26 @@
 import "./MobileMenu.css";
 
-export default function MobileMenu() {
+export default function MobileMenu({ closeMenu }) {
+  const handleBackgroundClick = (event) => {
+    if (event.target.id === "mobile-modal--background") {
+      closeMenu();
+    }
+  };
+
+  const handleButtonClick = () => {
+    closeMenu();
+  };
+
   return (
     <>
-      <div className="mobile-modal--background active">
+      <div
+        id="mobile-modal--background"
+        className="mobile-modal--background active"
+        onClick={handleBackgroundClick}
+      >
         <div className="mobile-modal--container">
           <nav>
-            <button>X</button>
+            <button onClick={handleButtonClick}>X</button>
             <ul>
               <li>Dúvidas</li>
               <li>Valores</li>

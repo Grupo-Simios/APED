@@ -3,8 +3,8 @@ import "./Padrinho.css";
 export default function Padrinho() {
   return (
     <>
-      <section className="section-2--background">
-        <div className="section-2--container">
+      <div className="section-2--background">
+        <section id="padrinhos" className="section-2--container">
           <div className="img-secao">
             <img src="src/assets/primeirassecoes/section-2.svg" alt="" />
           </div>
@@ -31,8 +31,8 @@ export default function Padrinho() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 }

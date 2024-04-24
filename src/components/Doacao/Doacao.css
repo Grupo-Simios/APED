@@ -122,6 +122,9 @@ h1 {
     margin: 10px 0;
     padding: 10px 0;
   }
+  .mpbutton {
+    margin: 0 auto;
+  }
 
   .doacao-item--title {
     display: flex;
@@ -130,10 +133,11 @@ h1 {
 
   #valor {
     margin: 5px auto;
-    width: 80px;
+    width: 100px;
   }
 
   .doar-button {
+    width: 100px;
     margin: 5px auto;
   }
 

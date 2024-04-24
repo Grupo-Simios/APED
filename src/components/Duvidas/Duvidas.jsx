@@ -72,7 +72,7 @@ export default function Duvidas() {
   return (
     <>
       <div className="duvidas-background">
-        <div className="duvidas-container">
+        <section id="duvidas" className="duvidas-container">
           <div className="section-title">
             <h2>Dúvidas frequentes</h2>
           </div>
@@ -85,7 +85,7 @@ export default function Duvidas() {
               toggle={() => toggleDuvida(index)}
             />
           ))}
-        </div>
+        </section>
       </div>
     </>
   );

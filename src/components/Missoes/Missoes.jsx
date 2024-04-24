@@ -4,8 +4,8 @@ export default function Missoes() {
   return (
     <>
       <div className="missoes-background">
-        <div className="missoes-container">
-          <section className="retangulo-cards">
+        <section id="valores" className="missoes-container">
+          <div className="retangulo-cards">
             <div className="card">
               <img src="./src/assets/primeirassecoes/missao.svg" alt="missão" />
               <h2>Missão</h2>
@@ -39,8 +39,8 @@ export default function Missoes() {
                 transparência e ética em cada doação e resgate.
               </p>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
     </>
   );

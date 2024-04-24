@@ -3,6 +3,19 @@ import cavalosImage from "../../assets/cavalos/cavalos.svg";
 import cavalinho from "../../assets/cavalos/cavalos.svg";
 
 export default function ConhecaMais() {
+  window.onload = function () {
+    scrollToSection("sectionId");
+  };
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    setTimeout(function () {
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: "smooth",
+      });
+    }, 50);
+  };
   return (
     <>
       <div className="conheca-mais-background">
@@ -16,7 +29,12 @@ export default function ConhecaMais() {
               tratos.
             </p>
 
-            <button className="btn-quero-ajudar">Quero ajudar!</button>
+            <button
+              onClick={() => scrollToSection("doacao")}
+              className="btn-quero-ajudar"
+            >
+              Quero ajudar!
+            </button>
           </div>
           <div className="img-section">
             <img src={cavalosImage} alt="" />

@@ -42,7 +42,7 @@ export default function Doacao() {
   return (
     <>
       <div className="doacao-background">
-        <section className="doacao-container">
+        <section id="doacao" className="doacao-container">
           <img className="qr-code" src={qrcode} alt="" />
           <div className="doacao-formas">
             <div className="doacao-formas--item">
@@ -67,7 +67,7 @@ export default function Doacao() {
                 <img src={mpago} alt="" />
                 <h2>Mercado Pago</h2>
               </div>
-              <p>Digite um valor:</p>
+              <p>Insira o valor a doar:</p>
               <input
                 placeholder="Valor..."
                 type="number"

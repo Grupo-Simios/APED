@@ -1,12 +1,47 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import "./Header.css";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  window.onload = function () {
+    scrollToSection("sectionId");
+  };
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    setTimeout(function () {
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: "smooth",
+      });
+    }, 50);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const valoresSection = document.getElementById("valores");
+      if (valoresSection) {
+        const valoresSectionTop = valoresSection.getBoundingClientRect().top;
+        if (valoresSectionTop <= 0) {
+          setIsScrolled(true);
+        } else {
+          setIsScrolled(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen);
   };
 
   const closeMenu = () => {
@@ -15,9 +50,9 @@ export default function Header() {
 
   return (
     <>
-      <header>
+      <header className={isScrolled ? "fixed" : ""}>
         <nav className="menu-desktop">
-          <img src="src/assets/icons/aped-logo.svg" alt="" />
+          <img className="logo" src="src/assets/icons/aped-logo.svg" alt="" />
           <img
             className="menu-mobile"
             src="src/assets/icons/menu-mobile.svg"
@@ -26,24 +61,34 @@ export default function Header() {
           />
           <ul>
             <li>
-              <a href="#">Dúvidas</a>
+              <a onClick={() => scrollToSection("duvidas")} href="#">
+                Dúvidas
+              </a>
             </li>
             <li>
-              <a href="#">Valores</a>
+              <a onClick={() => scrollToSection("valores")} href="#">
+                Valores
+              </a>
             </li>
             <li>
-              <a href="#">Padrinhos</a>
+              <a onClick={() => scrollToSection("padrinhos")} href="#">
+                Padrinhos
+              </a>
             </li>
             <li>
-              <a href="#">Animais</a>
+              <a onClick={() => scrollToSection("animais")} href="#">
+                Animais
+              </a>
             </li>
             <li>
-              <a href="#">Como ajudar</a>
+              <a onClick={() => scrollToSection("doacao")} href="#">
+                Como ajudar
+              </a>
             </li>
           </ul>
         </nav>
       </header>
-      {isMenuOpen && <MobileMenu closeMenu={closeMenu} />} {/* Passando a função closeMenu */}
+      {isMenuOpen && <MobileMenu closeMenu={closeMenu} />}
     </>
   );
 }

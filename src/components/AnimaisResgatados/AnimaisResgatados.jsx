@@ -49,7 +49,7 @@ export default function AnimaisResgatados() {
   return (
     <div className="animais-resgatados--container">
       <div className="animais-resgatados--background">
-        <div className="title-container">
+        <div id="animais" className="title-container">
           <div className="title-content">
             <h1 className="title">
               Animais disponíveis para receber um padrinho ou madrinha

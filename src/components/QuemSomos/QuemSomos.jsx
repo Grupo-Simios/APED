@@ -38,7 +38,7 @@ export default function QuemSomos() {
             apadrinhamento dos animais abrigados.
           </p>
           <p>
-            Além disso, promovemos algumas ações phara captar recursos, como
+            Além disso, promovemos algumas ações para captar recursos, como
             rifas.
           </p>
         </section>

@@ -1,21 +1,40 @@
+import { useState, useEffect } from "react";
 import "./ConhecaMais.css";
 import cavalosImage from "../../assets/cavalos/cavalos.svg";
-import cavalinho from "../../assets/cavalos/cavalos.svg";
+import cavalinho from "../../assets/cavalos/cavalinho.svg";
 
 export default function ConhecaMais() {
+  const [imageSrc, setImageSrc] = useState(cavalosImage);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setImageSrc(window.innerWidth < 768 ? cavalinho : cavalosImage);
+    };
+
+    handleResize(); // Chamada inicial para definir a imagem com base no tamanho da tela atual
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Dependência vazia para executar o efeito apenas uma vez durante a montagem
+
   window.onload = function () {
     scrollToSection("sectionId");
   };
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
+    const offset = section.offsetTop - 74;
     setTimeout(function () {
       window.scrollTo({
-        top: section.offsetTop,
+        top: offset,
         behavior: "smooth",
       });
     }, 50);
   };
+
   return (
     <>
       <div className="conheca-mais-background">
@@ -37,7 +56,7 @@ export default function ConhecaMais() {
             </button>
           </div>
           <div className="img-section">
-            <img src={cavalosImage} alt="" />
+            <img src={imageSrc} alt="" />
           </div>
         </section>
       </div>

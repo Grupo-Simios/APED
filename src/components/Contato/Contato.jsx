@@ -3,7 +3,6 @@ import instaIcon from "../../assets/icons/insta-icon.svg";
 import apedLogo from "../../assets/icons/aped-logo.svg";
 import "./Contato.css";
 
-
 export default function Footer() {
   return (
     <>
@@ -26,20 +25,13 @@ export default function Footer() {
         </footer>
       </div>
 
-  
-      <div className="footer_text">
-                <a target="_blank" href="gruposimios.html">@Gruposímios</a>
-      </div>
-          <div className="simios-background">
-            <div className="simios-container">
-              <p></p>
-            </div>
-          </div>
       <div className="simios-background">
         <div className="simios-container">
-          <p></p>
+          <a target="_blank" href="gruposimios.html">
+            Desenvolvido por @gruposimios
+          </a>
         </div>
       </div>
     </>
-  )
+  );
 }

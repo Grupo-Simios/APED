@@ -49,6 +49,24 @@
   text-decoration: none;
 }
 
+.simios-background {
+  background: #292b1e;
+}
+
+.simios-container {
+  display: flex;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+
+.simios-container a {
+  color: #929292;
+  text-align: center;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 768px) {
   .contato-container {
     padding: 90px 0;

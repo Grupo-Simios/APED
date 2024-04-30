@@ -13,6 +13,32 @@ header {
   padding: 10px 30px;
 }
 
+.fixed {
+  transition: all 0.3s ease-in-out;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  animation: leftToRight 0.4s ease-in-out;
+}
+
+@keyframes leftToRight {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fixed .menu-desktop {
+  width: 100%;
+}
+
 .menu-desktop ul {
   display: flex;
   justify-content: space-between;
